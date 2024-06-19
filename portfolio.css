@@ -1,0 +1,149 @@
+
+  
+  
+  body {
+    background-image: linear-gradient(to bottom right, hsl(209, 93%, 17%), hsl(207, 78%, 75%));
+    
+  }
+    .navbar {
+    padding: 10px 0;
+    text-align: center;
+   
+}
+.desk h1 {color: hsl(0, 0%, 0%);font-family:Copperplate;font-size: 40px;}
+.desk p {color:rgb(255, 255, 255); font-size: 30px; padding-top: 20%; padding: 10%; top: -100px;
+  }
+
+section{display: flex;}
+.photo{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+/* Стиль для ссылок */
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: #4682B4;
+}
+.cloud {
+    width: 1000px;
+    height: 1000px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 30px;
+   
+}
+.a{top:-100px;}
+.cloud img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    grid-gap: 5px;
+}
+
+.cloud-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* полупрозрачный черный фон */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.cloud:hover img {
+    transform: scale(1.1);
+}
+
+.cloud:hover .cloud-text {
+    opacity: 1;
+}
+.cloud-container {
+    perspective: 1000px;
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  @keyframes cloud-container {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+  .cloud {
+    position: relative;
+    width: 230px;
+    height: 230px;
+   
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: levitate 3s ease-in-out infinite;
+  }
+  
+  @keyframes levitate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #real {
+    background-color: #87CEEB; /* light blue background */
+    padding: 40px 0;
+    font-family:Copperplate;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px; /* added to make the gallery container wider */
+    margin: 40px auto; /* added to add some space around the gallery */
+  }
+  
+  figure {
+    width: 350px; /* increased width to make the photos bigger */
+    margin: 20px; /* increased margin to add more space between photos */
+    border: 2px solid #ccc; /* increased border width to make it more visible */
+    border-radius: 20px; /* increased border radius to make it more rounded */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* increased box shadow to make it more prominent */
+    background-color: #fff;
+    padding: 30px; /* increased padding to add more space around the photo */
+  }
+  
+  figure img {
+    width: 100%;
+    height: 250px; /* increased height to make the photos bigger */
+    object-fit: cover;
+    border-radius: 20px 20px 0 0; /* increased border radius to match the figure element */
+  }
+  
+  figure figcaption {
+    text-align: center;
+    font-size: 24px; /* increased font size to make the captions bigger */
+    color: #333;
+    padding: 20px; /* increased padding to add more space around the caption */
+  }
